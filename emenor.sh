@@ -9,7 +9,9 @@ while read -r ciudad; do
         menor_media=$media
         ciudad_menor=$ciudad
     fi
-done < <(sed 1d consumos.txt | awk '{print $1}')
+done <<- EOF
+$(sed 1d consumos.txt | awk '{print $1}')
+EOF
 
 echo "La ciudad con la media de consumos más baja es: $ciudad_menor"
 
