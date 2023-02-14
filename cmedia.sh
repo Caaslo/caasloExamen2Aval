@@ -1,3 +1,5 @@
+#!/bin/bash
+
 if [ -z "$1" ]; then
     echo "Tiene que introducir una ciudad como parametro"
     exit 1
